@@ -12,12 +12,14 @@ def main():
     img2 = cv.imread(img_path2)
 
     h, w, _ = img1.shape
+    #  压缩文件使得两张图片相同
     img2 = cv.resize(img2, (w, h), interpolation=cv.INTER_AREA)
 
     dst = cv.addWeighted(img1, 0.6, img2, 0.4, 0)
     cv.imshow('dst', dst)
     cv.waitKey(0)
     cv.destroyAllWindows()
+
 
 if __name__ == '__main__':
     main()
