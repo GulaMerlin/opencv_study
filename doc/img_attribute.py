@@ -1,8 +1,11 @@
+import pathlib
+
 import cv2 as cv
 import os
 from matplotlib import pyplot as plt
 import numpy as np
-path = 'D:\Code\study_opencv\images'
+bath_path = pathlib.Path.cwd().parent
+path = pathlib.Path(bath_path, 'images')
 img_path = os.path.join(path, 'dva1.jpg')
 img = cv.imread(img_path)
 
